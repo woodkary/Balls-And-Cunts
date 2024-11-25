@@ -14,7 +14,7 @@ import java.util.List;
 public class MallServiceImpl implements MallService {
     final StoreClient storeClient;
     @Override
-    public Collection<Integer> queryItemByIds(Collection<Long> ids) {
+    public Collection<Integer> queryItemByIds(String ids) {
         return storeClient.queryItemByIds(ids);
     }
 }

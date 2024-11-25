@@ -12,6 +12,6 @@ import java.util.Collection;
 @FeignClient(name = "service-store")
 public interface StoreClient {
     @GetMapping("/store/items")
-    Collection<Integer> queryItemByIds(@RequestParam("ids") Collection<Long> ids) ;
+    Collection<Integer> queryItemByIds(@RequestParam("ids")String ids) ;
 }
 

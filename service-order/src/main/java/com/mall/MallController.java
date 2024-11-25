@@ -21,11 +21,10 @@ public class MallController {
     final MallService mallService ;
     @GetMapping("/getNumsbyIds/{ids}")
     public Map<String, Object> getNumsbyId(@PathVariable("ids") String ids){
-        Collection<Long> idsList = Arrays.stream(ids.split("-")).map(Long::parseLong).toList();
         return Map.of(
                 "code", 200,
                 "message", "success",
-                "ids",mallService.queryItemByIds(idsList)
+                "ids",mallService.queryItemByIds(ids)
         );
     }
 

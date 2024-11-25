@@ -9,5 +9,5 @@ import java.util.Collection;
  * @author karywoodOyo
  */
 public interface MallService {
-    Collection<Integer> queryItemByIds(Collection<Long> ids);
+    Collection<Integer> queryItemByIds(String ids);
 }
