@@ -19,6 +19,7 @@
     <modules>
         <module>service-order</module>
         <module>service-store</module>
+        <module>service-gateway</module>
         <!--        <module>mall-common</module>-->
 <!--        <module>mall-gateway</module>-->
 <!--        <module>mall-user-service</module>-->

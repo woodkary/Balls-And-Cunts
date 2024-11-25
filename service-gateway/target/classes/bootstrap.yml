@@ -1,0 +1,21 @@
+server:
+  port: 8081
+
+spring:
+  application:
+    name: service-gateway
+  cloud:
+    gateway:
+      routes:
+        - id: order-service-route
+          uri: lb://service-order
+          predicates:
+            - Path=/mall/**
+        - id: store-service-route
+          uri: lb://service-store
+          predicates:
+            - Path=/store/**
+    nacos:
+      server-addr: localhost:8848
+      discovery:
+        ephemeral: false
