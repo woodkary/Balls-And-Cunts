@@ -19,3 +19,23 @@ spring:
       server-addr: localhost:8848
       discovery:
         ephemeral: false
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+  endpoint:
+    health:
+      show-details: always
+    metrics:
+      enabled: true # 应用性能指标
+    httptrace:
+      enabled: true  # http请求信息
+
+logging:
+  level:
+    root: INFO
+    com.mall: DEBUG
+  file:
+    name: logs/gateway/application.log

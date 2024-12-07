@@ -13,3 +13,19 @@ spring:
       server-addr: localhost:8848
       discovery:
         ephemeral: false
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+  endpoint:
+    health:
+      show-details: always
+
+logging:
+  level:
+    root: INFO
+    com.mall: DEBUG
+  file:
+    name: logs/order/application.log
