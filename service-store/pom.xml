@@ -40,5 +40,11 @@
             <artifactId>spring-boot-starter-actuator</artifactId>
         </dependency>
 
+        <!--使用通用模块 -->
+        <dependency>
+            <groupId>com.cloud</groupId>
+            <artifactId>service-commom</artifactId>
+        </dependency>
+
     </dependencies>
 </project>

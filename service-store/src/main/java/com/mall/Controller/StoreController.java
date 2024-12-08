@@ -1,10 +1,12 @@
 package com.mall.Controller;
 
+import com.mall.R;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.Arrays;
 import java.util.Collection;
+import java.util.HashMap;
 import java.util.List;
 
 @RestController
@@ -24,6 +26,11 @@ public class StoreController {
     @GetMapping("/items")
      public Collection<Integer> queryItemByIds(@RequestParam("ids") String ids) {
         return Arrays.stream(ids.split("-")).map(Integer::parseInt).toList();
+    }
+
+    @GetMapping("/order")
+    public R getOrder() {
+        return R.success(System.currentTimeMillis()/1000);
     }
 
 }

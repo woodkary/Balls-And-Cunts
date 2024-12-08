@@ -21,14 +21,7 @@
         <module>service-store</module>
         <module>service-gateway</module>
         <module>service-monitor</module>
-        <!--        <module>mall-common</module>-->
-<!--        <module>mall-gateway</module>-->
-<!--        <module>mall-user-service</module>-->
-<!--        <module>mall-product-service</module>-->
-<!--        <module>mall-order-service</module>-->
-<!--        <module>mall-config</module>-->
-<!--        <module>mall-eureka</module>-->
-<!--        <module>mall-search-service</module>-->
+        <module>service-commom</module>
 
     </modules>
 
@@ -56,6 +49,12 @@
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
+            <!--使用子模块做通用模块 -->
+            <dependency>
+                <groupId>com.cloud</groupId>
+                <artifactId>service-commom</artifactId>
+                <version>1.0.0</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 
@@ -68,6 +67,7 @@
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-bootstrap</artifactId>
         </dependency>
+
     </dependencies>
 
     <build>
